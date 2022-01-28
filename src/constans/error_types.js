@@ -1,0 +1,10 @@
+module.exports={
+  NAME_OR_PASSWORD_IS_REQUIRED:'name_or_password_is_required',
+  USER_ALREADY_EXISTS:'user_already_exists',
+  USER_DOES_IS_NOT_EXISTS:'user_does_is_not_exists',
+  PASSWORD_IS_INCORRENT:'password_is_incorrent',
+  UNAUTHORIZATION:'UNAUTHORIZATION',
+  AUTHORIZATION_IS_REQUIRED:'authorization_is_required',
+  UNPERMISSION:'unpermission',
+  QUERY_OR_PARAMS_IS_INCORRENT:'query_or_params_is_incorrent'
+}
