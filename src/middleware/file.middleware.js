@@ -5,7 +5,7 @@ const avatarUpload=Multer({
   dest:'./uploads/avatar'
 })
 // 上传图片的key为avatar
-const avatarHandler=avatarUpload.single('avatar')
+const avatarHandler=avatarUpload.single('avatar')//保存头像中间件
 
 const pictureUpload=Multer({
   dest:'./uploads/picture'

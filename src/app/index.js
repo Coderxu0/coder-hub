@@ -2,7 +2,6 @@ const koa =require('koa')
 const bodyParser=require('koa-bodyparser')
 const useRouters=require('../router')
 const errorHandler=require('./error-handles')
-console.log(useRouters)
 
 const app=new koa()
 

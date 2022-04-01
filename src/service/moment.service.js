@@ -6,7 +6,6 @@ class MomentService {
     return result
   }
   async getMomentById(momentId) {
-    console.log(1)
     // const statement = `SELECT m.id id ,m.content content,m.createAt createTime,m.updateAt updateTime,
     // JSON_OBJECT('id',u.id,'name',u.name)users
     // FROM moment m 
@@ -47,7 +46,6 @@ class MomentService {
     return result
   }
   async deleteMoment(momentId) {
-    console.log(momentId)
     const statement = `DELETE FROM moment WHERE id=? `
     const result = await connection.execute(statement, [momentId])
     return result

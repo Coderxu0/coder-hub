@@ -2,9 +2,9 @@ const errTypes = require('../constans/error_types')
 const errorHandler = function (error, ctx) {
   let status, message
   switch (error.message) {
-    case errTypes.NAME_OR_PASSWORD_IS_REQUIRED:
+    case errTypes.NAME_OR_PASSWORD_IS_INCORRENT:
       status = 400  //Bad Request
-      message = '用户名或密码不能为空'
+      message = '用户名或密码不符合格式'
       break
     case errTypes.USER_ALREADY_EXISTS:
       status = 409 //conflict
@@ -31,8 +31,8 @@ const errorHandler = function (error, ctx) {
       message = '没有权限'
       break
     case errTypes.QUERY_OR_PARAMS_IS_INCORRENT:
-      status = 401  //未授权 (没有携带token)
-      message = '参数有误'
+      status = 500  
+      message = '执行出错'
       break
     default:
       status = 404

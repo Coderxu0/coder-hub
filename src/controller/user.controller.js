@@ -16,7 +16,7 @@ class UserController {
       ctx.app.emit('error', error, ctx)
     }
   }
-
+  //获取头像
   async getAvatar(ctx,next){
     const {userId}=ctx.params
     //从数据库中取出文件相关信息

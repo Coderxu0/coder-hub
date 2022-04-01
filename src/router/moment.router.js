@@ -36,5 +36,6 @@ momentRouter.delete('/:momentId',verifyAuth,verifyPermission,del)
 //为动态添加标签，可以添加多个
 momentRouter.post('/:momentId/labels',verifyAuth,verifyPermission,verifyLabelExists,addLabels)
 
+//获取动态配图接口
 momentRouter.get('/images/:filename',fileInfo)
 module.exports=momentRouter

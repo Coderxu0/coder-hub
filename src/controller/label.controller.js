@@ -1,6 +1,7 @@
 const labelService = require('../service/label.service')
 const LabelService=require('../service/label.service')
 class LabelCotroller{
+  //分页获取标签
   async getLabelList(ctx,next){
     try {
       const {id}=ctx.user
@@ -12,6 +13,7 @@ class LabelCotroller{
       ctx.app.emit('error',error,ctx)
     }
   }
+  //通过标签获取动态
   async getMomentByLabels(ctx,next){
     try {
       const {id}=ctx.user

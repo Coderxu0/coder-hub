@@ -1,5 +1,5 @@
 module.exports={
-  NAME_OR_PASSWORD_IS_REQUIRED:'name_or_password_is_required',
+  NAME_OR_PASSWORD_IS_INCORRENT:'name_or_password_is_incorrent',
   USER_ALREADY_EXISTS:'user_already_exists',
   USER_DOES_IS_NOT_EXISTS:'user_does_is_not_exists',
   PASSWORD_IS_INCORRENT:'password_is_incorrent',

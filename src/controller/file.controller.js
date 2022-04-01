@@ -41,3 +41,5 @@ module.exports=new FileController()
 //存入动态配图时同时存用户id动态id和图片信息，将图片文件数据保存在uploads/picture文件夹中，将配图文件的相关信息(filename,mimetype等)和用户id动态id存入数据库
 //在查询动态详情时会返回我们根据filename拼接好的图片地址
 //取出图片时接口满足上面举例的路径，根据params传参取得图片的filename，从数据库中取出头像信息，根据filename再从文件夹中取出图片数据 返回
+
+//删除的话也是可以做的，返回的图片都有id可以校验权限后根据id删除

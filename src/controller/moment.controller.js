@@ -44,7 +44,6 @@ class MomentCotroller {
   //用户修改动态
   async update(ctx, next) {
     try {
-
       const { momentId } = ctx.params
       const content = ctx.request.body.content
       const result = await MomentService.updateMoment(content, momentId)
@@ -88,6 +87,8 @@ class MomentCotroller {
       ctx.app.emit('error', error, ctx)
     }
   }
+
+  //获取配图
   async fileInfo(ctx, next) {
     let { filename } = ctx.params
     const fileInfo = await FileService.getFileByFilename(filename)

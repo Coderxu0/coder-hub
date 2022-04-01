@@ -5,6 +5,7 @@ const JWT = require('jsonwebtoken')
 const { md5password } = require('../utils/password-handle')
 const { PUBLIC_KEY } = require('../app/config')
 module.exports = {
+  //登录校验
   async verifyLogin(ctx, next) {
     //1、获取用户名和密码
     const { username, password } = ctx.request.body
@@ -58,7 +59,6 @@ module.exports = {
   },
   //权限验证(用户是否修改/删除的是自己的动态...)
   async verifyPermission(ctx, next) {
-
     //降低耦合度，params传参会传{momentId:?},{commentId:?}......可以通过拿到key去截取字符串得到表名tablename,达到复用效果
     const [resouseKey] = Object.keys(ctx.params)
     const tablename=resouseKey.replace('Id','')
@@ -72,6 +72,5 @@ module.exports = {
     }
     await next()
   }
-
 
 }
