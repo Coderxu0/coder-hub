@@ -1,4 +1,4 @@
-# corder-hub
+# coder-hub
 ## 一个练习nodejs的项目——程序员交友平台(corderWhy nodejs)
 ## 技术栈：koa+mysql
 ### 核心模块
